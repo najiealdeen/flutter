@@ -1,4 +1,4 @@
-// Copyright 2014 The Flutter Authors. All rights reserved.
+ // Copyright 2014 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -50,16 +50,16 @@ void main() {
 
   test('Colors swatches do not contain duplicates', () {
     for (final MaterialColor color in Colors.primaries) {
-      expect(primaryKeys.map<Color>((int key) => color[key]!).toSet().length, primaryKeys.length);
+      expect(primaryKeys.map<Color>((int key) => color[key]).toSet().length, primaryKeys.length);
     }
 
     expect(
-      primaryKeys.map<Color>((int key) => Colors.grey[key]!).toSet().length,
+      primaryKeys.map<Color>((int key) => Colors.grey[key]).toSet().length,
       primaryKeys.length,
     );
 
     for (final MaterialAccentColor color in Colors.accents) {
-      expect(accentKeys.map<Color>((int key) => color[key]!).toSet().length, accentKeys.length);
+      expect(accentKeys.map<Color>((int key) => color[key]).toSet().length, accentKeys.length);
     }
   });
 

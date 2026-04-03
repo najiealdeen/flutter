@@ -1,4 +1,4 @@
-// Copyright 2014 The Flutter Authors. All rights reserved.
+ // Copyright 2014 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
@@ -231,7 +231,7 @@ void main() {
     await tester.pumpWidget(buildFrame(count: 20, height: 100.0, prototypeKey: prototypeKey));
 
     final RenderObject scrollView = tester.renderObject(find.byType(CustomScrollView));
-    final RenderObject prototype = prototypeKey.currentContext!.findRenderObject()!;
+    final RenderObject prototype = prototypeKey.currentContext!.findRenderObject();
 
     expect(prototype.getTransformTo(scrollView), Matrix4.zero());
   });
